@@ -13,22 +13,20 @@ public class Pin : MonoBehaviour {
 
     //highlights sprite when mouse over pin,
     //opens menu when clicked
-    void onMouseOver() {
+    private void OnMouseOver() {
+        Debug.Log("Mouse over pin");
         spr.sprite = highlighted;
-        if(Input.GetMouseButtonDown(0)) {
-            gameObject.SendMessage("open");
-            spr.sprite = normal;
-        }
     }
 
-    //reverts sprite backt to normal when
-    //mouse leaves pin
-    void onMouseExit() {
+    //mouse goes to normal sprite when leaves
+    private void OnMouseExit() {
+        Debug.Log("Mouse exited");
         spr.sprite = normal;
     }
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log("Game started");
         spr = GetComponent<SpriteRenderer>();
         spr.sprite = normal;
 	}
