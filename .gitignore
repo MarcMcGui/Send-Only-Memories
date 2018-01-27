@@ -1,0 +1,44 @@
+# ===========================
+# Default Git Ignore Rules
+# ===========================
+
+# OS Generated
+# ============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# Visual Studio / MonoDevelop generated
+# =====================================
+[Ee]xported[Oo]bj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+
+# Unity generated
+# ===============
+[Oo]bj/
+[Bb]uild
+sysinfo.txt
+*.stackdump
+Temp/
+UnityGenerated/
+Library/
+Assets/AssetStoreTools*
+
+# Save Files
+# ==========
+[Ll]evel.txt
+[Ll]anes.txt
