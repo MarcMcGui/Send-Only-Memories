@@ -48,11 +48,11 @@ public class LetterClass : MonoBehaviour
         selected = !selected;
         if (selected = true)
         {
-            sprite = spriteNamesSelected[spriteKey];
+            spriteFile = spriteNamesSelected[spriteKey];
         }
         else
         {
-            sprite = spriteNames[spriteKey];
+            spriteFile = spriteNames[spriteKey];
         }
     }
 
