@@ -23,23 +23,40 @@ public class LetterClass : MonoBehaviour
     //The name of the sprite file that will be used
     string spriteFile;
 
-    //An array of the names of the txt files holding the letters that cane be acceded by a key
+    //Tells whether the letter is from a text file or an img. True if it's an image, false if it's a text file
+    bool imgOrTxt;
+
+    //An array of the names of the txt files holding the letters that can be accessed by a key
     string[] letterTextNames = new string[7] { "letter0.txt", "letter1.txt", "letter2.txt", "letter3.txt", "letter4.txt", "letter5.txt", "letter6.txt" };
+
+    //An array of the names of the img files holding the letters that can be accessed by a key
+    string[] letterImgNames = new string[7] { "letterI0.png", "letterI1.png", "letterI2.png", "letterI3.png", "letterI4.png", "letterI5.png", "letterI6.png" };
 
     //The key of the text of the letter in the array
     int letterKey;
 
-    //The name of the text file that will be used
+    //The name of the text or image file that will be used
     string letterFile;
 
-	//Use this for initialization. Pass in the number of resources needed (rn), the key of the letter sprite (sk), and the key of the letter text (lk)
-	void Start (int rn, int sk, int lk)
+	//Use this for initialization. Pass in the number of resources needed (rn), the key of the letter sprite (sk), the key of the letter (lk), and wheather the letter is from a txt file or an img (it)
+	void Start (int rn, int sk, int lk, bool it)
     {
         resourcesNeeded = rn;
         spriteKey = sk;
         letterKey = lk;
+        imgOrTxt = it;
         spriteFile = spriteNames[spriteKey];
-        letterFile = letterTextNames[letterKey];
+
+        if (imgOrTxt == true)
+        {
+            letterFile = letterImgNames[letterKey];
+        }
+        else
+        {
+            letterFile = letterTextNames[letterKey];
+        }
+
+        
 	}
 
     //When you select the letter, call this
