@@ -24,8 +24,14 @@ public class Pin : MonoBehaviour {
         spr.sprite = normal;
     }
 
-	// Use this for initialization
-	void Start () {
+    private void OnMouseDrag() {
+        Debug.Log("Clicked mouse");
+        spr.sprite = normal;
+    }
+
+    // Use this for initialization
+    void Start () 
+    {
         Debug.Log("Game started");
         spr = GetComponent<SpriteRenderer>();
         spr.sprite = normal;
