@@ -26,6 +26,7 @@ public class Pin : MonoBehaviour {
 
     private void OnMouseDrag() {
         Debug.Log("Clicked mouse");
+        gameObject.SendMessage("open");
         spr.sprite = normal;
     }
 
