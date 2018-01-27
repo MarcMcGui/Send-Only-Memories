@@ -24,7 +24,7 @@ public class LetterClass : MonoBehaviour
     string spriteFile;
 
     //An array of the names of the txt files holding the letters that cane be acceded by a key
-    string[] letterTextNames = new string[7] { "letter0.txt", "letter1.txt", "letter3.txt", "letter4.txt", "letter5.txt", "letter6.txt" };
+    string[] letterTextNames = new string[7] { "letter0.txt", "letter1.txt", "letter2.txt", "letter3.txt", "letter4.txt", "letter5.txt", "letter6.txt" };
 
     //The key of the text of the letter in the array
     int letterKey;
