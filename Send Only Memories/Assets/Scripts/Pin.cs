@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Pin : MonoBehaviour {
 
+    //should determine what menu opens
     public int location;
 
     public Sprite normal;
     public Sprite highlighted;
     public SpriteRenderer spr;
 
-    //Mouse over pin highlights
-    //click opens menu
-
+    //highlights sprite when mouse over pin,
+    //opens menu when clicked
     void onMouseOver() {
         spr.sprite = highlighted;
         if(Input.GetMouseButtonDown(0)) {
@@ -21,6 +21,8 @@ public class Pin : MonoBehaviour {
         }
     }
 
+    //reverts sprite backt to normal when
+    //mouse leaves pin
     void onMouseExit() {
         spr.sprite = normal;
     }
