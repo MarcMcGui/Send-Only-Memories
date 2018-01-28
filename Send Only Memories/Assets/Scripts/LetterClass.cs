@@ -31,7 +31,7 @@ public class LetterClass : MonoBehaviour {
     }
 
     //Change sprite when pin is clicked
-    void chageSprite(int indexPosition) {
+    void changeSprite(int indexPosition) {
         GetComponent<SpriteRenderer>().sprite = sprites[gm.getIndex()];
         GetComponent<Text>().text = texts[gm.getIndex()];
     }
