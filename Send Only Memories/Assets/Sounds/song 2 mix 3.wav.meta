@@ -1,9 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 2dd8a071e5464064b9e3f21848e97d22
+timeCreated: 1517158994
+licenseType: Free
+AudioImporter:
+=======
 guid: 972d8283f3a5d2a43b19a8bf5c400efe
 timeCreated: 1517127517
 licenseType: Free
 AudioImporter:
   externalObjects: {}
+>>>>>>> bc3b48303d38547ab19856d64f3f603942223a8a
   serializedVersion: 6
   defaultSettings:
     loadType: 0
@@ -17,7 +24,10 @@ AudioImporter:
   normalize: 1
   preloadAudioData: 1
   loadInBackground: 0
+<<<<<<< HEAD
+=======
   ambisonic: 0
+>>>>>>> bc3b48303d38547ab19856d64f3f603942223a8a
   3D: 1
   userData: 
   assetBundleName: 

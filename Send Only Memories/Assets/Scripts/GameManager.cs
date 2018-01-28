@@ -111,7 +111,9 @@ public class GameManager : MonoBehaviour {
     public void Open(int pos)
     {
         pinHasClicked = true;
+        
         let.position = pos;
+        let.CreateLetter();
     }
 
     public void End()

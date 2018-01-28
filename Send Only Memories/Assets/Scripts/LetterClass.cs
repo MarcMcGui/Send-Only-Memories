@@ -10,7 +10,7 @@ public class LetterClass : MonoBehaviour {
     public string[] spriteNames = new string[21] {"BOSS_LETTER_PLACEHOLDER", "C1_ace.txt", "C1_bd.txt", "C1_ace.txt", "C1_bd.txt", "C1_ace.txt", "C2_a.txt", "C2_b.txt", "C2_c.txt", "C2_d.txt", "C2_e.txt", "C2_f.txt", "C3_ace.txt", "C3_bd.txt", "C3_ace.txt", "C3_bd.txt", "C3_ace.txt", "1_ZackAubrey.txt", "1_RubenTerry.txt", "1_RubenBridget.txt", "1_PrinceAndrew.txt" };
 
     //Amount of time it will take to send the letter (likely between 1 and 14 days)
-    int resourcesNeeded;
+    public int resourcesNeeded;
 
     //Whether the player has selected the letter to be sent
     bool selected = false;

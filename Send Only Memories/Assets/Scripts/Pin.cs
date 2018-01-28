@@ -7,6 +7,7 @@ public class Pin : MonoBehaviour {
     //should determine what menu opens
     public int location;
     public GameManager gm;
+    public bool hasClicked;
 
     public LetterMenu let;
     public Sprite normal;
@@ -16,6 +17,7 @@ public class Pin : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        hasClicked = false;
         gm = FindObjectOfType<GameManager>();
         let = FindObjectOfType<LetterMenu>();
         Debug.Log("Game started");
@@ -37,9 +39,13 @@ public class Pin : MonoBehaviour {
     }
 
     private void OnMouseDrag() {
-
-        gm.Open(location);
-        Debug.Log("Clicked mouse");
+        if (!hasClicked)
+        {
+            gm.Open(location);
+            hasClicked = true;
+            Debug.Log("Clicked mouse");
+        }
+        
         spr.sprite = normal;
     }
 

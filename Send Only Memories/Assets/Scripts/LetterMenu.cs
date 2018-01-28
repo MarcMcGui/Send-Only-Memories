@@ -1,10 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LetterMenu : MonoBehaviour {
     public GameManager gm;
-    public int position; 
+    public int position;
+    public LetterClass letter;
+    public LetterClass letterbase;
+    public Text timeCost;
 
 	// Use this for initialization
 	void Start () {
@@ -13,7 +17,26 @@ public class LetterMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if( gm.pinHasClicked )
+
+        if (letter != null)
+        {
+            if (letter.resourcesNeeded <= (14 - gm.weekTimer))
+            {
+                timeCost.text = "Letter takes " + letter.resourcesNeeded + " days to deliver";
+                timeCost.color = new Color(1, 1, 1);
+            }
+            else
+            {
+                timeCost.text = "Letter takes " + letter.resourcesNeeded + " days to deliver";
+                timeCost.color = new Color(1, 0, 0);
+            }
+        }
+        else
+        {
+            timeCost.text = "";
+        }
+
+        if ( gm.pinHasClicked )
         {
             Debug.Log("what");
             gameObject.SetActive(true);
@@ -26,12 +49,35 @@ public class LetterMenu : MonoBehaviour {
 
     public void Quit()
     {
+        GameObject.Destroy(letter.gameObject);
         gm.pinHasClicked = false;
     }
 
 
     public void Submit()
     {
-        gm.pinHasClicked = false;
+        if (letter != null)
+        {
+            Debug.Log("Arfarfanarf");
+            if (letter.resourcesNeeded <= (14 - gm.weekTimer)) {
+                timeCost.text = "Letter takes " + letter.resourcesNeeded + " days to deliver";
+                gm.weekTimer += letter.resourcesNeeded;
+                GameObject.Destroy(letter.gameObject);
+                gm.pinHasClicked = false;
+                timeCost.color = new Color(1, 1, 1);
+            }
+            else 
+            {
+                timeCost.text = "Letter takes " + letter.resourcesNeeded + " days to deliver";
+                timeCost.color = new Color(1, 0, 0);
+            }
+        }
+        
+    }
+
+    public void CreateLetter()
+    {
+        letter = Instantiate(letterbase, transform.position, Quaternion.identity);
+        letter.resourcesNeeded = position;
     }
 }
