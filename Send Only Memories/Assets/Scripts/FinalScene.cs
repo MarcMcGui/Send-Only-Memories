@@ -20,9 +20,12 @@ public class FinalScene : MonoBehaviour {
         {
             indices[i] = int.Parse(wrongIndices[i]);
 
+           // Transform transf = transform;
+           // transf.position = new Vector3(transform.position.x, transform.position.y + (i*2), 0);
+
             var item = Instantiate(anchor, transform);
             item.gameObject.GetComponent<SpriteRenderer>().sprite = item.sprites[indices[i]];
-            item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y + (i * 2), 0);
+            item.transform.position = new Vector3(item.transform.position.x, item.transform.position.y + (i*7.5f), 0);
         }
         
 
