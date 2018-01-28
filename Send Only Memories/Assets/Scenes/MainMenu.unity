@@ -306,7 +306,7 @@ SpriteRenderer:
   m_Size: {x: 10.2, y: 7.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &632054666
 GameObject:
@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 1744709563}
   - component: {fileID: 1744709562}
   m_Layer: 0
-  m_Name: SendOnlyMemoriesMenu_v1
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -981,7 +981,7 @@ SpriteRenderer:
   m_SortingLayerID: -595972457
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: dcfedded758cc5d4393d9a32e75ebd61, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 96e33718d358fc440ade156e6a8a632b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
