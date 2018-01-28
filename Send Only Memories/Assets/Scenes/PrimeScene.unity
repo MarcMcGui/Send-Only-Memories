@@ -427,6 +427,24 @@ Prefab:
       propertyPath: location
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 212031051831684296, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 82f9c78e75c46144f8918a824f975abf,
+        type: 3}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 82f9c78e75c46144f8918a824f975abf,
+        type: 3}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: highlighted
+      value: 
+      objectReference: {fileID: 21300000, guid: 7f55a049148cb0d4fad69a4023761c2e,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
   m_IsPrefabParent: 0
@@ -779,6 +797,24 @@ Prefab:
       propertyPath: location
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 212031051831684296, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1dd4f3e05e1b38942b329c709b466c66,
+        type: 3}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 21300000, guid: 1dd4f3e05e1b38942b329c709b466c66,
+        type: 3}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: highlighted
+      value: 
+      objectReference: {fileID: 21300000, guid: 9dbbc124e6d61cc459cb9d54fe5b41a5,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
   m_IsPrefabParent: 0
@@ -980,6 +1016,24 @@ Prefab:
       propertyPath: location
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 21300000, guid: df5b034f3ef069844b1fca9e5b2f1104,
+        type: 3}
+    - target: {fileID: 114021478658241812, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: highlighted
+      value: 
+      objectReference: {fileID: 21300000, guid: d85a07f2bfd939641962b77a7073632e,
+        type: 3}
+    - target: {fileID: 212031051831684296, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df5b034f3ef069844b1fca9e5b2f1104,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
   m_IsPrefabParent: 0
@@ -1306,10 +1360,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weekTimer: 0
+  pins: []
   sizeOfLetters: 4
   indicies: 
   pinHasClicked: 0
   let: {fileID: 687305150}
+  gma: {fileID: 141606074}
+  sprR: {fileID: 0}
 --- !u!222 &1975979364
 CanvasRenderer:
   m_ObjectHideFlags: 0

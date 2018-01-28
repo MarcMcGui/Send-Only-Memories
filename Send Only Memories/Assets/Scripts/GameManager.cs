@@ -7,16 +7,22 @@ public class GameManager : MonoBehaviour {
 
     //public variables
     public int weekTimer;
+    public Pin[] pins;
     public int sizeOfLetters;
     public List<int> indicies;
     public bool pinHasClicked;
     public LetterMenu let;
+    public GameObject gma;
+    public SpriteRenderer sprR;
 
     //private variables
     private int apocalypseCountdown;
 
 	// Use this for initialization
 	void Start () {
+        pins = FindObjectsOfType<Pin>();
+        sprR = gma.GetComponent<SpriteRenderer>();
+        sprR.color = new Color(0, 0, 0);
         indicies = new List<int>();
         for ( int i = 0; i < sizeOfLetters; i++)
         {
@@ -29,14 +35,38 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ( pinHasClicked)
+
+        if ( sprR.color.r < 1)
         {
-            let.gameObject.SetActive(true);
+            for (int i = 0; i < pins.Length; i++)
+            {
+                pins[i].gameObject.SetActive(false);
+            }
+            sprR.color = new Color(sprR.color.r + 0.008f, sprR.color.g + 0.008f, sprR.color.b + 0.008f);
         }
         else
         {
-            let.gameObject.SetActive(false);
+            
+            if (pinHasClicked)
+            {
+                for (int i = 0; i < pins.Length; i++)
+                {
+                    pins[i].gameObject.SetActive(false);
+                }
+                let.gameObject.SetActive(true);
+            }
+            else
+            {
+                for (int i = 0; i < pins.Length; i++)
+                {
+                    pins[i].gameObject.SetActive(true);
+                }
+                let.gameObject.SetActive(false);
+            }
         }
+
+        
+        
         //Increases the time to end if all weeks have been used. 
         if ( weekTimer >= 14 )
         {
