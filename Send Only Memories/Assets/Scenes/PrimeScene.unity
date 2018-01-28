@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -77,17 +77,19 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFiltering: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousColorSigma: 1
-    m_PVRFilteringAtrousNormalSigma: 1
-    m_PVRFilteringAtrousPositionSigma: 1
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -363,7 +365,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
 --- !u!4 &141606076
 Transform:
   m_ObjectHideFlags: 0
@@ -415,6 +416,16 @@ Prefab:
     - target: {fileID: 4889386578016726, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: index
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: location
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
@@ -625,6 +636,11 @@ Prefab:
       propertyPath: m_Name
       value: Pin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: location
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
   m_IsPrefabParent: 0
@@ -833,6 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gm: {fileID: 1975979362}
+  clickedPin: {fileID: 0}
   position: 0
   letter: {fileID: 0}
   letterbase: {fileID: 114309627299821922, guid: 12ca3ef4f9a9b4e478974c423ea41ade,
@@ -1215,6 +1232,16 @@ Prefab:
       propertyPath: m_Name
       value: Pin (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: index
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: location
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
   m_IsPrefabParent: 0
@@ -1360,8 +1387,9 @@ MonoBehaviour:
   cycle: {fileID: 1872884198}
   breakTimer: 0
   pins: []
-  sizeOfLetters: 4
+  sizeOfLetters: 21
   indicies: 
+  lettersPerCycle: 
   pinHasClicked: 0
   let: {fileID: 687305150}
   gma: {fileID: 141606074}
@@ -1433,6 +1461,16 @@ Prefab:
     - target: {fileID: 1586345725678978, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
       propertyPath: m_Name
       value: Pin (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114989394043783818, guid: f9f3d2b5b4b3bc046a2967d737a33600,
+        type: 2}
+      propertyPath: location
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f9f3d2b5b4b3bc046a2967d737a33600, type: 2}
