@@ -50,6 +50,7 @@ public class LetterMenu : MonoBehaviour {
 
     public void Quit()
     {
+        clickedPin.spr.sprite = clickedPin.normal;
         GameObject.Destroy(letter.gameObject);
         gm.pinHasClicked = false;
     }
@@ -67,6 +68,7 @@ public class LetterMenu : MonoBehaviour {
                 gm.pinHasClicked = false;
                 clickedPin.hasClicked = true;
                 timeCost.color = new Color(1, 1, 1);
+                clickedPin.spr.sprite = clickedPin.normal;
             }
             else 
             {
@@ -74,7 +76,8 @@ public class LetterMenu : MonoBehaviour {
                 timeCost.color = new Color(1, 0, 0);
             }
         }
-        
+       
+
     }
 
     public void CreateLetter()
