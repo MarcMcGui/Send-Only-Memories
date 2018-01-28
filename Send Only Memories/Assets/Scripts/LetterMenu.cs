@@ -32,6 +32,6 @@ public class LetterMenu : MonoBehaviour {
 
     public void Submit()
     {
-        
+        gm.pinHasClicked = false;
     }
 }

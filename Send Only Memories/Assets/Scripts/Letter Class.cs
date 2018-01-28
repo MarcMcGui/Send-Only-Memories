@@ -5,10 +5,10 @@ using UnityEngine;
 public class LetterClass : MonoBehaviour
 {
     //Amount of time it will take to send the letter (likely between 1 and 14 days)
-    int resourcesNeeded;
+    public int resourcesNeeded;
 
     //Whether the player has selected the letter to be sent
-    bool selected = false;
+    public bool selected = false;
 
     //Whether the player has sent the letter (only changed at the end of the day)
     bool sent = false;

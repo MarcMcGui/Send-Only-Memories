@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
     //public variables
     public int weekTimer;
+    public int sizeOfLetters;
+    public List<int> indicies;
     public bool pinHasClicked;
     public LetterMenu let;
 
@@ -14,6 +17,11 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        indicies = new List<int>();
+        for ( int i = 0; i < sizeOfLetters; i++)
+        {
+            indicies.Add(i);
+        }
         pinHasClicked = false;
         apocalypseCountdown = 0;
 
@@ -51,5 +59,12 @@ public class GameManager : MonoBehaviour {
     public void End()
     {
 
+    }
+
+    public int getIndex()
+    {
+        int num = Random.Range(0, indicies.Count);
+        indicies.Remove(indicies[num]);
+        return indicies[num];
     }
 }
