@@ -85,6 +85,7 @@ MonoBehaviour:
   normal: {fileID: 21300000, guid: 2cd96231f03fdab49927564fb468f168, type: 3}
   highlighted: {fileID: 21300000, guid: a3fbafb93f92f1a4a851bce91213c800, type: 3}
   spr: {fileID: 0}
+  index: 0
 --- !u!212 &212031051831684296
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -126,3 +127,4 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

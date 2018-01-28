@@ -48,6 +48,7 @@ public class PinCorrected : MonoBehaviour
             let.clickedPin = this;
         }
 
+        Debug.Log("Clicked mouse");
         spr.sprite = normal;
     }
 

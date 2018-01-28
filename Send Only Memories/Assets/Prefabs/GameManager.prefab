@@ -52,17 +52,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weekTimer: 0
-  sprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  texts:
-  - {fileID: 4900000, guid: 581a2d616833e14468ed241e7b24f563, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  warning: {fileID: 0}
+  cycle: {fileID: 0}
+  breakTimer: 0
+  pins: []
+  sizeOfLetters: 0
+  indicies: 
+  lettersPerCycle: 
   pinHasClicked: 0
   let: {fileID: 0}
+  gma: {fileID: 0}
+  sprR: {fileID: 0}
+  apocalypseCountdown: 0

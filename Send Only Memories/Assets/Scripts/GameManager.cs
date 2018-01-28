@@ -133,8 +133,6 @@ public class GameManager : MonoBehaviour {
         let.position = pos;
         let.CreateLetter(index);
         pinHasClicked = true;
-        
-        
     }
 
     public void End()
