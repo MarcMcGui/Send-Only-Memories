@@ -146,4 +146,10 @@ public class GameManager : MonoBehaviour {
     {
         return lettersPerCycle[ind];
     }
+
+    //Need to add the button to end the current cycle with this code
+    public void EndCycle()
+    {
+        weekTimer = 14;
+    }
 }
