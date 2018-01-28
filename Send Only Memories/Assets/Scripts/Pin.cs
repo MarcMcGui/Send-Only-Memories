@@ -41,7 +41,7 @@ public class Pin : MonoBehaviour {
     private void OnMouseDrag() {
         if (!hasClicked)
         {
-            gm.Open(location);
+            gm.Open(location, 2);
             hasClicked = true;
             Debug.Log("Clicked mouse"); 
         }

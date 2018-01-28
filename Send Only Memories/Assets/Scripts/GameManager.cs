@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
     public PinCorrected[] pins;
     public int sizeOfLetters;
     public List<int> indicies;
+    public int[] lettersPerCycle;
     public bool pinHasClicked;
     public LetterMenu let;
     public GameObject gma;
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        lettersPerCycle = new int[4];
         breakTimer = 0;
         pins = FindObjectsOfType<PinCorrected>();
         sprR = gma.GetComponent<SpriteRenderer>();
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour {
         {
             indicies.Add(i);
         }
+        GenerateLettersPerCycle();
         pinHasClicked = false;
         apocalypseCountdown = 0;
 
@@ -69,6 +72,7 @@ public class GameManager : MonoBehaviour {
                     for (int i = 0; i < pins.Length; i++)
                     {
                         pins[i].gameObject.SetActive(true);
+                       // pins[i].hasClicked = false;
                     }
                     let.gameObject.SetActive(false);
                 }
@@ -81,7 +85,12 @@ public class GameManager : MonoBehaviour {
             {
                 breakTimer = 5;
                 apocalypseCountdown += 1;
+                for (int i = 0; i < pins.Length; i++)
+                {
+                    pins[i].hasClicked = false;
+                }
                 weekTimer = 0;
+                GenerateLettersPerCycle();
             }
 
             //transitions to next scene if end of 4 months
@@ -108,12 +117,23 @@ public class GameManager : MonoBehaviour {
         
 	}
 
-    public void Open(int pos)
+    public void GenerateLettersPerCycle()
     {
+        for(int i = 0; i < 4; i++)
+        {
+            int num = Random.Range(0, (indicies.Count - 1));
+            lettersPerCycle[i] = indicies[num];
+            indicies.Remove(indicies[num]);
+        }
+    }
+
+    public void Open(int pos, int index)
+    {
+        let.position = pos;
+        let.CreateLetter(index);
         pinHasClicked = true;
         
-        let.position = pos;
-        let.CreateLetter();
+        
     }
 
     public void End()
@@ -121,11 +141,8 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public int getIndex()
+    public int GetIndex(int ind)
     {
-        int num = Random.Range(0, indicies.Count);
-        int temp = indicies[num];
-        indicies.Remove(indicies[num]);
-        return temp;
+        return lettersPerCycle[ind];
     }
 }

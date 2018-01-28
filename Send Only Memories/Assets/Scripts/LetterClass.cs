@@ -25,7 +25,7 @@ public class LetterClass : MonoBehaviour {
     void Start() {
         gm = FindObjectOfType<GameManager>();
 
-        index = -1;
+       // index = -1;
 
         //changeSprite(gm.getIndex());
     }
@@ -39,8 +39,8 @@ public class LetterClass : MonoBehaviour {
 
     //Change sprite when pin is clicked
     void changeSprite() {
-        GetComponent<SpriteRenderer>().sprite = sprites[gm.getIndex(index)];
-        GetComponent<Text>().text = texts[gm.getIndex(index)].ToString();
+        GetComponent<SpriteRenderer>().sprite = sprites[gm.GetIndex(index)];
+        GetComponent<Text>().text = texts[gm.GetIndex(index)].ToString();
     }
 
 }

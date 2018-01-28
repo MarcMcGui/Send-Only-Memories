@@ -80,10 +80,11 @@ public class LetterMenu : MonoBehaviour {
 
     }
 
-    public void CreateLetter()
+    public void CreateLetter(int index)
     {
         letter = Instantiate(letterbase, transform.position, Quaternion.identity);
+        letter.index = index;
         letter.resourcesNeeded = position;
-        letter.index = clickedPin.index;
+        
     }
 }

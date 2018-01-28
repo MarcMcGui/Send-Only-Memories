@@ -45,7 +45,7 @@ public class PinCorrected : MonoBehaviour
     {
         if (!hasClicked)
         {
-            gm.Open(location);
+            gm.Open(location, index);
             let.clickedPin = this;
             Debug.Log("Clicked mouse");
         }
