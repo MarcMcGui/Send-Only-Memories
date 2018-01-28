@@ -10,14 +10,18 @@ public class LetterMenu : MonoBehaviour {
     public LetterClass letter;
     public LetterClass letterbase;
     public Text timeCost;
+    public bool soundPlayed;
 
 	// Use this for initialization
 	void Start () {
         gm = FindObjectOfType<GameManager>();
-	}
+        soundPlayed = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
+
+        hasPlayedSound();
 
         if (letter != null)
         {
@@ -41,6 +45,7 @@ public class LetterMenu : MonoBehaviour {
         {
             Debug.Log("what");
             gameObject.SetActive(true);
+
         }
         else
         {
@@ -50,9 +55,19 @@ public class LetterMenu : MonoBehaviour {
 
     public void Quit()
     {
+        
         clickedPin.spr.sprite = clickedPin.normal;
         GameObject.Destroy(letter.gameObject);
         gm.pinHasClicked = false;
+        soundPlayed = false;
+    }
+
+    public void hasPlayedSound() {
+        if(soundPlayed == false) {
+            AudioSource paperRustle = GetComponent<AudioSource>();
+            paperRustle.Play();
+            soundPlayed = true;
+        }
     }
 
 

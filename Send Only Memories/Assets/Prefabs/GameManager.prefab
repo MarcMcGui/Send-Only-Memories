@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4569566828129242}
-  - component: {fileID: 114810453694239822}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -40,27 +39,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114810453694239822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1956289559501044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1c4a62344356a46a45a7d45e6e7635, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weekTimer: 0
-  warning: {fileID: 0}
-  cycle: {fileID: 0}
-  breakTimer: 0
-  pins: []
-  sizeOfLetters: 0
-  indicies: 
-  lettersPerCycle: 
-  pinHasClicked: 0
-  let: {fileID: 0}
-  gma: {fileID: 0}
-  sprR: {fileID: 0}
-  apocalypseCountdown: 0
