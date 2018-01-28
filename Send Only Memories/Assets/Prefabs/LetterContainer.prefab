@@ -65,49 +65,27 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7f62e1dd856c8be4d93cab7a842e8be7, type: 3}
   - {fileID: 21300000, guid: 5adbbec2ee7db1647aea2da614cbf256, type: 3}
   texts:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  spriteNames:
-  - 1_boss
-  - C1_ace.txt
-  - C1_bd.txt
-  - C1_ace.txt
-  - C1_bd.txt
-  - C1_ace.txt
-  - C2_a.txt
-  - C2_b.txt
-  - C2_c.txt
-  - C2_d.txt
-  - C2_e.txt
-  - C2_f.txt
-  - C3_ace.txt
-  - C3_bd.txt
-  - C3_ace.txt
-  - C3_bd.txt
-  - C3_ace.txt
-  - 1_ZackAubrey.txt
-  - 1_RubenTerry.txt
-  - 1_RubenBridget.txt
-  - 1_PrinceAndrew.txt
+  - {fileID: 4900000, guid: ab1ebf99a8b41aa439f82b7297ad4ec9, type: 3}
+  - {fileID: 4900000, guid: b73daf642c649c944b0d9707b649a6c8, type: 3}
+  - {fileID: 4900000, guid: 16d4cb991aa89b5408e1bd3bd9c181e3, type: 3}
+  - {fileID: 4900000, guid: 0a321468b98f81446b7586f39923536e, type: 3}
+  - {fileID: 4900000, guid: 5945ae4b66803ce4ba52c0cab898a1ce, type: 3}
+  - {fileID: 4900000, guid: 73d8ae97fc6bf4944a07fd32ec512256, type: 3}
+  - {fileID: 4900000, guid: 15931de5823202c4cb6426a171d60ef8, type: 3}
+  - {fileID: 4900000, guid: f22017535c592e3409fe7ec28e12a0b1, type: 3}
+  - {fileID: 4900000, guid: 78d90d6232b56c245a8a6f0c9b44c7e1, type: 3}
+  - {fileID: 4900000, guid: 76bcda99a61597d4a9e035397454a713, type: 3}
+  - {fileID: 4900000, guid: e7fa59a454bfbf4428d90fefd17ef21e, type: 3}
+  - {fileID: 4900000, guid: a34c34382df78e04c9a942d05251f682, type: 3}
+  - {fileID: 4900000, guid: a34c34382df78e04c9a942d05251f682, type: 3}
+  - {fileID: 4900000, guid: 924fd24055df4ea498378b5e3ae72777, type: 3}
+  - {fileID: 4900000, guid: 56c3eab4d80fe9f4cbf4cfef8b553afd, type: 3}
+  - {fileID: 4900000, guid: 51d9f180257f44f49a3b41fcfe4b1301, type: 3}
+  - {fileID: 4900000, guid: 8b0c990852028b649a4b5615e594fb49, type: 3}
+  - {fileID: 4900000, guid: bcf268605a705644c948fcf5b57cab51, type: 3}
+  - {fileID: 4900000, guid: a8aee288b8b85714eaf42eb617da6d08, type: 3}
+  - {fileID: 4900000, guid: 4a6fd689a473a8943a13ecde520eb894, type: 3}
+  - {fileID: 4900000, guid: 19c4bab6ea271ad44959512940381f03, type: 3}
   resourcesNeeded: 0
 --- !u!114 &114887689395181272
 MonoBehaviour:
