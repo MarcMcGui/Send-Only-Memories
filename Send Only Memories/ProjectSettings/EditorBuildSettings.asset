@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrimeScene.unity
     guid: ad3dd48bd3c925d4c9845343cd869d5b
+  - enabled: 1
+    path: Assets/Scenes/EndCredits.unity
+    guid: ec61ccfa3b852480baf1193c29ff9ae0

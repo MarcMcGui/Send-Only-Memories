@@ -31,9 +31,14 @@ public class LetterClass : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if(index >= 0){
-            changeSprite();
+        if (gm != null)
+        {
+            if (index >= 0)
+            {
+                changeSprite();
+            }
         }
+        
     }
 
     //Change sprite when pin is clicked

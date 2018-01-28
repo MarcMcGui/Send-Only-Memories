@@ -15,7 +15,7 @@ public class getCreditLetter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if(index >= 0) {
-            GetComponent<SpriteRenderer>().sprite = sprites[gm.GetIndex(index)];
+           // GetComponent<SpriteRenderer>().sprite = sprites[gm.GetIndex(index)];
         }
     }
 }

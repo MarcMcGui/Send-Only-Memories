@@ -137,6 +137,11 @@ public class GameManager : MonoBehaviour {
 
     public void End()
     {
+        System.IO.File.WriteAllText("indices.txt", "");
+        for (int i = 0; i < indicies.Count; i++)
+        {
+            System.IO.File.AppendAllText("indices.txt", indicies[i] + ",");
+        }
         SceneManager.LoadScene(2);
     }
 
