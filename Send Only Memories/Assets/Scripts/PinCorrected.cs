@@ -13,6 +13,7 @@ public class PinCorrected : MonoBehaviour
     public Sprite normal;
     public Sprite highlighted;
     public SpriteRenderer spr;
+    public int index;
 
     // Use this for initialization
     void Start()
