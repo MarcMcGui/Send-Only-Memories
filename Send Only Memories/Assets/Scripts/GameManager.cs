@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
     public LetterMenu let;
     public GameObject gma;
     public SpriteRenderer sprR;
+    public int numDaysPassed;
 
     //private variables
     private int apocalypseCountdown;
@@ -30,6 +31,7 @@ public class GameManager : MonoBehaviour {
         }
         pinHasClicked = false;
         apocalypseCountdown = 0;
+        numDaysPassed = 0;
 
     }
 	
@@ -96,5 +98,14 @@ public class GameManager : MonoBehaviour {
         int num = Random.Range(0, indicies.Count);
         indicies.Remove(indicies[num]);
         return indicies[num];
+    }
+
+    public void dayCounter() {
+        if(numDaysPassed > 7) {
+            weekTimer += 1;
+        }
+        if(weekTimer == 2) {
+            numDaysPassed = 0;
+        }
     }
 }
