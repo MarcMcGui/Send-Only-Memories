@@ -6,19 +6,29 @@ public class GameManager : MonoBehaviour {
 
     //public variables
     public int weekTimer;
+    public bool pinHasClicked;
+    public LetterMenu let;
 
     //private variables
     private int apocalypseCountdown;
 
 	// Use this for initialization
 	void Start () {
+        pinHasClicked = false;
         apocalypseCountdown = 0;
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-
+        if ( pinHasClicked)
+        {
+            let.gameObject.SetActive(true);
+        }
+        else
+        {
+            let.gameObject.SetActive(false);
+        }
         //Increases the time to end if all weeks have been used. 
         if ( weekTimer >= 14 )
         {
@@ -31,6 +41,12 @@ public class GameManager : MonoBehaviour {
             End();
         }
 	}
+
+    public void Open(int pos)
+    {
+        pinHasClicked = true;
+        let.position = pos;
+    }
 
     public void End()
     {

@@ -6,10 +6,22 @@ public class Pin : MonoBehaviour {
 
     //should determine what menu opens
     public int location;
+    public GameManager gm;
 
+    public LetterMenu let;
     public Sprite normal;
     public Sprite highlighted;
     public SpriteRenderer spr;
+
+    // Use this for initialization
+    void Start()
+    {
+        gm = FindObjectOfType<GameManager>();
+        let = FindObjectOfType<LetterMenu>();
+        Debug.Log("Game started");
+        spr = GetComponent<SpriteRenderer>();
+        spr.sprite = normal;
+    }
 
     //highlights sprite when mouse over pin,
     //opens menu when clicked
@@ -25,17 +37,12 @@ public class Pin : MonoBehaviour {
     }
 
     private void OnMouseDrag() {
+
+        gm.Open(location);
         Debug.Log("Clicked mouse");
-        gameObject.SendMessage("open");
         spr.sprite = normal;
     }
 
-    // Use this for initialization
-    void Start () 
-    {
-        Debug.Log("Game started");
-        spr = GetComponent<SpriteRenderer>();
-        spr.sprite = normal;
-	}
+   
 
 }
