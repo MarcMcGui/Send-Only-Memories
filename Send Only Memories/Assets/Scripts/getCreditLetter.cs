@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class getCreditLetter : MonoBehaviour {
+public class GetCreditLetter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
