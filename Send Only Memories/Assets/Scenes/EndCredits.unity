@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 9
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 8
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -88,9 +88,8 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaDirect: 0.5
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
-    m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_ShadowMaskMode: 2
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -110,8 +109,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1 &48164111
 GameObject:
@@ -767,7 +764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -58.121, y: -510}
+  m_AnchoredPosition: {x: -58.120995, y: -510}
   m_SizeDelta: {x: 66.14, y: 27.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &427235366
@@ -1016,7 +1013,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -109.167}
+  m_AnchoredPosition: {x: 0, y: -109.16701}
   m_SizeDelta: {x: 178.7, y: 172.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681634545
@@ -1202,7 +1199,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d3570a1ab3cc45f9b793a57a54a11c9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4b506f3b7ef7b9944878cab32784c210, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1447,7 +1444,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.014343, y: -305.5}
+  m_AnchoredPosition: {x: 0.014343001, y: -305.5}
   m_SizeDelta: {x: 182.41, y: 34.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &776052001
@@ -1679,7 +1676,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.01564, y: -273.15}
+  m_AnchoredPosition: {x: -0.015639998, y: -273.15}
   m_SizeDelta: {x: 182.41, y: 20.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925953306
@@ -2164,11 +2161,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!114 &1128109850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2767,7 +2764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0050049, y: -160.7}
+  m_AnchoredPosition: {x: 0.0050048996, y: -160.7}
   m_SizeDelta: {x: 182.41, y: 74.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1532833469
@@ -3719,7 +3716,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0050048, y: -28.4}
+  m_AnchoredPosition: {x: 0.0050048, y: -28.399998}
   m_SizeDelta: {x: 182.41, y: 20.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044132861
