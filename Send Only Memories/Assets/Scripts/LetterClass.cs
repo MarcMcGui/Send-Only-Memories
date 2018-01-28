@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class LetterClass : MonoBehaviour {
     public GameManager gm;
     public Sprite[] sprites;
-    public System.String[] texts;
+    public string[] texts;
+    public string[] spriteNames = new string[21] {"1_boss", "C1_ace.txt", "C1_bd.txt", "C1_ace.txt", "C1_bd.txt", "C1_ace.txt", "C2_a.txt", "C2_b.txt", "C2_c.txt", "C2_d.txt", "C2_e.txt", "C2_f.txt", "C3_ace.txt", "C3_bd.txt", "C3_ace.txt", "C3_bd.txt", "C3_ace.txt", "1_ZackAubrey.txt", "1_RubenTerry.txt", "1_RubenBridget.txt", "1_PrinceAndrew.txt" };
 
     //Amount of time it will take to send the letter (likely between 1 and 14 days)
     int resourcesNeeded;
@@ -23,6 +24,10 @@ public class LetterClass : MonoBehaviour {
     //Use this for initialization
     void Start() {
         gm = FindObjectOfType<GameManager>();
+
+        for(int i = 0; i < sprites.Length; i++){
+            texts[i] = System.IO.File.ReadAllText(spriteNames[i]);
+        }
     }
 
     // Update is called once per frame

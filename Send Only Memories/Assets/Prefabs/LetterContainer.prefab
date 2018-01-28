@@ -43,18 +43,71 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 0}
   sprites:
-  - {fileID: 21300000, guid: 7f62e1dd856c8be4d93cab7a842e8be7, type: 3}
-  - {fileID: 21300000, guid: 65fa3f7d1cc986b418a6defda965df1a, type: 3}
-  - {fileID: 21300000, guid: abf8b9be62b016b47a787e9a06000bf4, type: 3}
+  - {fileID: 21300000, guid: 67f13d50313e22c4ebb38a6000142249, type: 3}
   - {fileID: 21300000, guid: d20eeac7822f66b4abb92f9517757874, type: 3}
   - {fileID: 21300000, guid: 1f291f643ac661d4296e60dad86fb258, type: 3}
-  - {fileID: 21300000, guid: 862e51e72a3a26847a9dd2b539c4d333, type: 3}
+  - {fileID: 21300000, guid: d20eeac7822f66b4abb92f9517757874, type: 3}
+  - {fileID: 21300000, guid: 1f291f643ac661d4296e60dad86fb258, type: 3}
+  - {fileID: 21300000, guid: d20eeac7822f66b4abb92f9517757874, type: 3}
   - {fileID: 21300000, guid: 03439b5c75ac8154fa9e50e104e83f84, type: 3}
   - {fileID: 21300000, guid: e4fd816984ad172439ed817ea2ab6d51, type: 3}
   - {fileID: 21300000, guid: c05889bf2b093d14784731e59718d02e, type: 3}
   - {fileID: 21300000, guid: 31b486de636889747b2bf8516260981e, type: 3}
   - {fileID: 21300000, guid: e908d5548efca834ca0389bad3d506c2, type: 3}
-  texts: []
+  - {fileID: 21300000, guid: 862e51e72a3a26847a9dd2b539c4d333, type: 3}
+  - {fileID: 21300000, guid: 55df05742e928a543a0b4387fc1deb5d, type: 3}
+  - {fileID: 21300000, guid: f68b9d84ba21f1d47a7d0b5b40a13a2b, type: 3}
+  - {fileID: 21300000, guid: 55df05742e928a543a0b4387fc1deb5d, type: 3}
+  - {fileID: 21300000, guid: f68b9d84ba21f1d47a7d0b5b40a13a2b, type: 3}
+  - {fileID: 21300000, guid: 55df05742e928a543a0b4387fc1deb5d, type: 3}
+  - {fileID: 21300000, guid: abf8b9be62b016b47a787e9a06000bf4, type: 3}
+  - {fileID: 21300000, guid: 65fa3f7d1cc986b418a6defda965df1a, type: 3}
+  - {fileID: 21300000, guid: 7f62e1dd856c8be4d93cab7a842e8be7, type: 3}
+  - {fileID: 21300000, guid: 5adbbec2ee7db1647aea2da614cbf256, type: 3}
+  texts:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  spriteNames:
+  - 1_boss
+  - C1_ace.txt
+  - C1_bd.txt
+  - C1_ace.txt
+  - C1_bd.txt
+  - C1_ace.txt
+  - C2_a.txt
+  - C2_b.txt
+  - C2_c.txt
+  - C2_d.txt
+  - C2_e.txt
+  - C2_f.txt
+  - C3_ace.txt
+  - C3_bd.txt
+  - C3_ace.txt
+  - C3_bd.txt
+  - C3_ace.txt
+  - 1_ZackAubrey.txt
+  - 1_RubenTerry.txt
+  - 1_RubenBridget.txt
+  - 1_PrinceAndrew.txt
 --- !u!114 &114887689395181272
 MonoBehaviour:
   m_ObjectHideFlags: 1
