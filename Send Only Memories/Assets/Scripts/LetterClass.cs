@@ -24,8 +24,6 @@ public class LetterClass : MonoBehaviour {
     void Start() {
         gm = FindObjectOfType<GameManager>();
 
-        texts[0].ToString();
-
        // index = -1;
 
         //changeSprite(gm.getIndex());
