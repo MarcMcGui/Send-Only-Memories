@@ -124,7 +124,8 @@ public class GameManager : MonoBehaviour {
     public int getIndex()
     {
         int num = Random.Range(0, indicies.Count);
+        int temp = indicies[num];
         indicies.Remove(indicies[num]);
-        return indicies[num];
+        return temp;
     }
 }
