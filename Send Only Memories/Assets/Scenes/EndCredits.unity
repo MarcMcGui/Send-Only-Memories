@@ -1065,8 +1065,6 @@ MonoBehaviour:
 
     James Joseph
 
-    Edward King
-
     Kelly Lockwood
 
     Marcus McGuire
@@ -1484,9 +1482,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Charyse Clites
-
-    Edward King'
+  m_Text: Charyse Clites
 --- !u!222 &776052002
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3454,6 +3450,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Development Team
 
+
     Christian Anton
 
     Charyse Clites
@@ -3467,8 +3464,6 @@ MonoBehaviour:
     JD Hockema
 
     James Joseph
-
-    Edward King
 
     Kelly Lockwood
 
@@ -4056,8 +4051,6 @@ MonoBehaviour:
     JD Hockema
 
     James Joseph
-
-    Edward King
 
     Kelly Lockwood
 
