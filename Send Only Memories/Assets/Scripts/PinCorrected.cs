@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pin : MonoBehaviour {
+public class PinCorrected : MonoBehaviour
+{
 
     //should determine what menu opens
     public int location;
     public GameManager gm;
     public bool hasClicked;
-
     public LetterMenu let;
     public Sprite normal;
     public Sprite highlighted;
@@ -27,28 +27,31 @@ public class Pin : MonoBehaviour {
 
     //highlights sprite when mouse over pin,
     //opens menu when clicked
-    private void OnMouseOver() {
+    private void OnMouseOver()
+    {
         Debug.Log("Mouse over pin");
         spr.sprite = highlighted;
     }
 
     //mouse goes to normal sprite when leaves
-    private void OnMouseExit() {
+    private void OnMouseExit()
+    {
         Debug.Log("Mouse exited");
         spr.sprite = normal;
     }
 
-    private void OnMouseDrag() {
+    private void OnMouseDrag()
+    {
         if (!hasClicked)
         {
             gm.Open(location);
             hasClicked = true;
-            Debug.Log("Clicked mouse"); 
+            Debug.Log("Clicked mouse");
         }
-        
+
         spr.sprite = normal;
     }
 
-   
+
 
 }

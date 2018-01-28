@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour {
     public Text warning;
     public Text cycle;
     public float breakTimer;
-    public Pin[] pins;
+    public PinCorrected[] pins;
     public int sizeOfLetters;
     public List<int> indicies;
     public bool pinHasClicked;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start () {
         breakTimer = 0;
-        pins = FindObjectsOfType<Pin>();
+        pins = FindObjectsOfType<PinCorrected>();
         sprR = gma.GetComponent<SpriteRenderer>();
         sprR.color = new Color(0, 0, 0);
         indicies = new List<int>();
