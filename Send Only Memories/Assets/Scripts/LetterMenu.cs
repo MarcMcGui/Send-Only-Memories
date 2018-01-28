@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LetterMenu : MonoBehaviour {
     public GameManager gm;
+    public PinCorrected clickedPin;
     public int position;
     public LetterClass letter;
     public LetterClass letterbase;
@@ -64,6 +65,7 @@ public class LetterMenu : MonoBehaviour {
                 gm.weekTimer += letter.resourcesNeeded;
                 GameObject.Destroy(letter.gameObject);
                 gm.pinHasClicked = false;
+                clickedPin.hasClicked = true;
                 timeCost.color = new Color(1, 1, 1);
             }
             else 
