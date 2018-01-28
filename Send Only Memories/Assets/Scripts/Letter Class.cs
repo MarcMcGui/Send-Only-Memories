@@ -38,8 +38,14 @@ public class LetterClass : MonoBehaviour
     //The name of the text or image file that will be used
     string letterFile;
 
-	//Use this for initialization. Pass in the number of resources needed (rn), the key of the letter sprite (sk), the key of the letter (lk), and wheather the letter is from a txt file or an img (it)
-	void Start (int rn, int sk, int lk, bool it)
+	//Use this for initialization
+	void Start ()
+    {
+        
+	}
+
+    // Pass in the number of resources needed (rn), the key of the letter sprite (sk), the key of the letter (lk), and wheather the letter is from a txt file or an img (it)
+    void initializeLetter(int rn, int sk, int lk, bool it)
     {
         resourcesNeeded = rn;
         spriteKey = sk;
@@ -55,15 +61,13 @@ public class LetterClass : MonoBehaviour
         {
             letterFile = letterTextNames[letterKey];
         }
+    }
 
-        
-	}
-
-    //When you select the letter, call this
+    //When you select the letter, call this. 
     void selectLetter()
     {
         selected = !selected;
-        if (selected = true)
+        if (selected == true)
         {
             spriteFile = spriteNamesSelected[spriteKey];
         }
