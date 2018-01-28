@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class LetterClass : MonoBehaviour {
     public GameManager gm;
     public Sprite[] sprites;
-    public TextAsset[] texts = new TextAsset[21];
     public int index;
 
     //Amount of time it will take to send the letter (likely between 1 and 14 days)
@@ -25,6 +24,8 @@ public class LetterClass : MonoBehaviour {
     void Start() {
         gm = FindObjectOfType<GameManager>();
 
+        texts[0].ToString();
+
        // index = -1;
 
         //changeSprite(gm.getIndex());
@@ -40,7 +41,6 @@ public class LetterClass : MonoBehaviour {
     //Change sprite when pin is clicked
     void changeSprite() {
         GetComponent<SpriteRenderer>().sprite = sprites[gm.GetIndex(index)];
-        GetComponent<Text>().text = texts[gm.GetIndex(index)].ToString();
     }
 
 }
