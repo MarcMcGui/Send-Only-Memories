@@ -67,7 +67,7 @@ public class LetterMenu : MonoBehaviour {
                 GameObject.Destroy(letter.gameObject);
                 gm.pinHasClicked = false;
                 clickedPin.hasClicked = true;
-                timeCost.color = new Color(1, 1, 1);
+                timeCost.color = new Color(0, 0, 0);
                 clickedPin.spr.sprite = clickedPin.normal;
             }
             else 

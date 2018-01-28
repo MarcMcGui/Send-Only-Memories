@@ -21,7 +21,6 @@ public class PinCorrected : MonoBehaviour
         hasClicked = false;
         gm = FindObjectOfType<GameManager>();
         let = FindObjectOfType<LetterMenu>();
-        Debug.Log("Game started");
         spr = GetComponent<SpriteRenderer>();
         spr.sprite = normal;
     }
@@ -30,14 +29,14 @@ public class PinCorrected : MonoBehaviour
     //opens menu when clicked
     private void OnMouseOver()
     {
-        Debug.Log("Mouse over pin");
-        spr.sprite = highlighted;
+        if (!hasClicked) {
+            spr.sprite = highlighted;
+        }
     }
 
     //mouse goes to normal sprite when leaves
     private void OnMouseExit()
     {
-        Debug.Log("Mouse exited");
         spr.sprite = normal;
     }
 
@@ -47,7 +46,6 @@ public class PinCorrected : MonoBehaviour
         {
             gm.Open(location, index);
             let.clickedPin = this;
-            Debug.Log("Clicked mouse");
         }
 
         spr.sprite = normal;
