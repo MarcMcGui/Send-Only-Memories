@@ -7,6 +7,9 @@ public class GameManager : MonoBehaviour {
 
     //public variables
     public int weekTimer;
+    public Text warning;
+    public Text cycle;
+    public float breakTimer;
     public Pin[] pins;
     public int sizeOfLetters;
     public List<int> indicies;
@@ -14,13 +17,14 @@ public class GameManager : MonoBehaviour {
     public LetterMenu let;
     public GameObject gma;
     public SpriteRenderer sprR;
-    public int numDaysPassed;
+    public int apocalypseCountdown;
 
     //private variables
-    private int apocalypseCountdown;
 
-	// Use this for initialization
-	void Start () {
+
+    // Use this for initialization
+    void Start () {
+        breakTimer = 0;
         pins = FindObjectsOfType<Pin>();
         sprR = gma.GetComponent<SpriteRenderer>();
         sprR.color = new Color(0, 0, 0);
@@ -31,55 +35,77 @@ public class GameManager : MonoBehaviour {
         }
         pinHasClicked = false;
         apocalypseCountdown = 0;
-        numDaysPassed = 0;
 
     }
 	
 	// Update is called once per frame
 	void Update () {
-
-        if ( sprR.color.r < 1)
+        if (breakTimer <= 0)
         {
-            for (int i = 0; i < pins.Length; i++)
-            {
-                pins[i].gameObject.SetActive(false);
-            }
-            sprR.color = new Color(sprR.color.r + 0.008f, sprR.color.g + 0.008f, sprR.color.b + 0.008f);
-        }
-        else
-        {
-            
-            if (pinHasClicked)
+            cycle.text = "";
+            warning.text = "";
+            if (sprR.color.r < 1)
             {
                 for (int i = 0; i < pins.Length; i++)
                 {
                     pins[i].gameObject.SetActive(false);
                 }
-                let.gameObject.SetActive(true);
+                sprR.color = new Color(sprR.color.r + 0.005f, sprR.color.g + 0.005f, sprR.color.b + 0.005f);
             }
             else
             {
-                for (int i = 0; i < pins.Length; i++)
+                cycle.text = "Days Before Next Mail cycle " + (14 - weekTimer) + "";
+
+                if (pinHasClicked)
                 {
-                    pins[i].gameObject.SetActive(true);
+                    for (int i = 0; i < pins.Length; i++)
+                    {
+                        pins[i].gameObject.SetActive(false);
+                    }
+                    let.gameObject.SetActive(true);
                 }
-                let.gameObject.SetActive(false);
+                else
+                {
+                    for (int i = 0; i < pins.Length; i++)
+                    {
+                        pins[i].gameObject.SetActive(true);
+                    }
+                    let.gameObject.SetActive(false);
+                }
             }
+
+
+
+            //Increases the time to end if all weeks have been used. 
+            if (weekTimer >= 14)
+            {
+                breakTimer = 5;
+                apocalypseCountdown += 1;
+                weekTimer = 0;
+            }
+
+            //transitions to next scene if end of 4 months
+            if (apocalypseCountdown > 2)
+            {
+                End();
+            }
+        }
+        else
+        {
+            for (int i = 0; i < pins.Length; i++)
+            {
+                pins[i].gameObject.SetActive(false);
+            }
+            if (sprR.color.r > 0)
+            {
+                sprR.color = new Color(sprR.color.r - 0.005f, sprR.color.g - 0.005f, sprR.color.b - 0.005f);
+            }
+            warning.text = ((3 - apocalypseCountdown) * 2) + " Weeks Remaining";
+            breakTimer -= Time.deltaTime;
+            
         }
 
         
-        
-        //Increases the time to end if all weeks have been used. 
-        if ( weekTimer >= 14 )
-        {
-            apocalypseCountdown += 1;
-        }
-        
-        //transitions to next scene if end of 4 months
-		if ( apocalypseCountdown > 8)
-        {
-            End();
-        }
 	}
 
     public void Open(int pos)
@@ -98,14 +124,5 @@ public class GameManager : MonoBehaviour {
         int num = Random.Range(0, indicies.Count);
         indicies.Remove(indicies[num]);
         return indicies[num];
-    }
-
-    public void dayCounter() {
-        if(numDaysPassed > 7) {
-            weekTimer += 1;
-        }
-        if(weekTimer == 2) {
-            numDaysPassed = 0;
-        }
     }
 }
