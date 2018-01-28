@@ -84,6 +84,7 @@ public class LetterMenu : MonoBehaviour {
                 clickedPin.hasClicked = true;
                 timeCost.color = new Color(0, 0, 0);
                 clickedPin.spr.sprite = clickedPin.normal;
+
             }
             else 
             {
