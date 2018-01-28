@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
     public GameObject gma;
     public SpriteRenderer sprR;
     public int apocalypseCountdown;
+    public Sprite[] backgrounds;
+    public int backgroundIndex = 0;
 
     //private variables
 
@@ -29,7 +31,7 @@ public class GameManager : MonoBehaviour {
         lettersPerCycle = new int[4];
         breakTimer = 0;
         pins = FindObjectsOfType<PinCorrected>();
-        sprR = gma.GetComponent<SpriteRenderer>();
+        sprR = GetComponent<SpriteRenderer>();
         sprR.color = new Color(0, 0, 0);
         indicies = new List<int>();
         for ( int i = 0; i < sizeOfLetters; i++)
@@ -86,6 +88,7 @@ public class GameManager : MonoBehaviour {
             {
                 breakTimer = 5;
                 apocalypseCountdown += 1;
+                ChangeBackground(apocalypseCountdown);
                 for (int i = 0; i < pins.Length; i++)
                 {
                     pins[i].hasClicked = false;
@@ -154,5 +157,10 @@ public class GameManager : MonoBehaviour {
     public void EndCycle()
     {
         weekTimer = 14;
+    }
+
+    public void ChangeBackground(int index)
+    {
+        GetComponent<SpriteRenderer>().sprite = backgrounds[index];
     }
 }
